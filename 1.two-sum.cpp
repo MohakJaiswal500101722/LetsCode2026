@@ -6,19 +6,17 @@
 
 // @lc code=start
 
-// More optimized BRUTE FORCE SOLUTION
-#include <vector>
+// More optimized BRUTE FORCE SOLUTI
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         for (int i = 0 ; i < nums.size() ; i++) {
-            int req = target - nums[i]; //calculating the required number
-            for (int j = i + 1 ; j < nums.size() ; j++) {
-                if (nums[j] == req) {
-                    return {i , j};
+            for (int j = i+1 ; j < nums.size() ;j++) {
+               if (nums[i] + nums[j]== target){
+                    return{ i , j };
                 }
             }
-        } 
+        }
         return {};
     }
 };
